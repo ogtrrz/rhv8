@@ -1,0 +1,127 @@
+{
+  "applications": "*",
+  "changelogDate": "20230528204634",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "evidence",
+  "fields": [
+    {
+      "fieldName": "id2Trining",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "id2Requirents",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "id2Course",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "id2Employee",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "StateToDo",
+      "fieldValues": "NEW,CHECK"
+    },
+    {
+      "fieldName": "kind",
+      "fieldType": "Kind",
+      "fieldValues": "CERTIFICATE,ONTHEJOB,COURSE"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength", "required"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "note",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "500"
+    },
+    {
+      "fieldName": "expiration",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "link",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra5",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra6",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra7",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra8",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra9",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "extra10",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "created",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "edited",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "editedAt",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Evidence",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "code",
+      "otherEntityName": "training",
+      "otherEntityRelationshipName": "evidence",
+      "ownerSide": false,
+      "relationshipName": "training",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}
